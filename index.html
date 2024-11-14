@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customizable Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&family=Open+Sans:wght@300;400;700&family=Oswald:wght@200;400&family=Poppins:wght@300;400;700&family=Merriweather:wght@300;400;700&family=Raleway:wght@300;400;700&family=Nunito:wght@300;400;700&family=Montserrat:wght@300;400;700&family=Pacifico&family=Dancing+Script:wght@400;600&family=Playfair+Display:wght@400;700&family=Inconsolata:wght@300;400&family=Ubuntu:wght@300;400;700&family=Varela+Round&family=Zilla+Slab:wght@300;400;600&family=Arimo:wght@400;700&family=Fira+Sans:wght@300;400;700&family=Lora:wght@400;700&family=Work+Sans:wght@300;400;700&family=Righteous&family=Rubik:wght@300;400;700&family=PT+Serif:wght@400;700&family=Overpass:wght@300;400;700&family=Quicksand:wght@300;400;700&family=Cabin:wght@400;700&family=Source+Code+Pro:wght@300;400&family=Amatic+SC:wght@400;700&family=Indie+Flower&family=Bebas+Neue&family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -18,7 +17,7 @@
             <button id="pauseBtn">Pause</button>
             <button id="resetBtn">Reset</button>
         </div>
-        <div style="margin-top: 20px;">
+        <div>
             <label for="workTime">Work Time:</label>
             <input type="number" id="workTime" value="25" min="1" max="60">
             <label for="breakTime">Break Time:</label>
@@ -40,78 +39,22 @@
                 <option value="image">Image</option>
                 <option value="gif">GIF</option>
             </select>
-            <div id="gradient-section">
-                <label for="gradient-direction">Gradient Direction:</label>
-                <select id="gradient-direction">
-                    <option value="to right">Left to Right</option>
-                    <option value="to bottom">Top to Bottom</option>
-                    <option value="to left">Right to Left</option>
-                    <option value="to top">Bottom to Top</option>
-                </select>
-                <button id="add-gradient-stop">Add Gradient Stop</button>
-                <div id="gradient-stops"></div>
-            </div>
+            <label for="gradient-direction">Gradient Direction:</label>
+            <select id="gradient-direction">
+                <option value="to right">Left to Right</option>
+                <option value="to bottom">Top to Bottom</option>
+            </select>
+            <button id="add-gradient-stop">Add Gradient Stop</button>
+            <div id="gradient-stops"></div>
+        </div>
+        <div class="settings-group">
             <label for="gif-url">GIF URL:</label>
             <input type="text" id="gif-url" placeholder="Enter GIF URL">
             <label for="upload-gif">Upload GIF:</label>
             <input type="file" id="upload-gif" accept="image/gif">
             <button id="apply-gif">Apply GIF</button>
         </div>
-        <div class="settings-group">
-            <label for="font-type">Font:</label>
-            <select id="font-type">
-                <option value="Arial">Arial</option>
-                <option value="'Roboto', sans-serif">Roboto</option>
-                <option value="'Open Sans', sans-serif">Open Sans</option>
-                <option value="'Lobster', cursive">Lobster</option>
-                <option value="'Oswald', sans-serif">Oswald</option>
-                <option value="'Poppins', sans-serif">Poppins</option>
-                <option value="'Merriweather', serif">Merriweather</option>
-                <option value="'Raleway', sans-serif">Raleway</option>
-                <option value="'Nunito', sans-serif">Nunito</option>
-                <option value="'Montserrat', sans-serif">Montserrat</option>
-                <option value="'Pacifico', cursive">Pacifico</option>
-                <option value="'Dancing Script', cursive">Dancing Script</option>
-                <option value="'Playfair Display', serif">Playfair Display</option>
-                <option value="'Inconsolata', monospace">Inconsolata</option>
-                <option value="'Ubuntu', sans-serif">Ubuntu</option>
-                <option value="'Varela Round', sans-serif">Varela Round</option>
-                <option value="'Zilla Slab', serif">Zilla Slab</option>
-                <option value="'Arimo', sans-serif">Arimo</option>
-                <option value="'Fira Sans', sans-serif">Fira Sans</option>
-                <option value="'Lora', serif">Lora</option>
-                <option value="'Work Sans', sans-serif">Work Sans</option>
-                <option value="'Righteous', cursive">Righteous</option>
-                <option value="'Rubik', sans-serif">Rubik</option>
-                <option value="'PT Serif', serif">PT Serif</option>
-                <option value="'Overpass', sans-serif">Overpass</option>
-                <option value="'Quicksand', sans-serif">Quicksand</option>
-                <option value="'Cabin', sans-serif">Cabin</option>
-                <option value="'Source Code Pro', monospace">Source Code Pro</option>
-                <option value="'Amatic SC', cursive">Amatic SC</option>
-                <option value="'Indie Flower', cursive">Indie Flower</option>
-                <option value="'Bebas Neue', cursive">Bebas Neue</option>
-                <option value="'Comfortaa', cursive">Comfortaa</option>
-                <option value="'Georgia', serif">Georgia</option>
-                <option value="'Comic Sans MS', cursive">Comic Sans MS</option>
-                <option value="'Courier New', monospace">Courier New</option>
-                <option value="'Verdana', sans-serif">Verdana</option>
-                <option value="'Times New Roman', serif">Times New Roman</option>
-                <option value="'Tahoma', sans-serif">Tahoma</option>
-                <option value="'Impact', sans-serif">Impact</option>
-                <option value="'Lucida Console', monospace">Lucida Console</option>
-                <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
-                <option value="'Garamond', serif">Garamond</option>
-                <option value="'Franklin Gothic Medium', sans-serif">Franklin Gothic Medium</option>
-                <option value="'Arial Black', sans-serif">Arial Black</option>
-                <option value="'Palatino Linotype', serif">Palatino Linotype</option>
-                <option value="'Book Antiqua', serif">Book Antiqua</option>
-                <option value="'Candara', sans-serif">Candara</option>
-                <option value="'Gill Sans', sans-serif">Gill Sans</option>
-            </select>
-            <label for="font-size">Size:</label>
-            <input type="number" id="font-size" value="48" min="10" max="100">
-            <label for="font-color">Color:</label>
-            <input type="color" id="font-color" value="#333">
-        </div>
-        <button id
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
