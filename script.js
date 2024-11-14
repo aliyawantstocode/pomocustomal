@@ -1,3 +1,5 @@
+// Full Updated JavaScript Code with Rain and Snow Effects
+
 // Select elements
 const startBtn = document.getElementById('startBtn');
 const pauseBtn = document.getElementById('pauseBtn');
@@ -188,3 +190,27 @@ resetBtn.addEventListener('click', resetTimer);
 openSettingsBtn.addEventListener('click', () => {
     settingsPanel.style.display = settingsPanel.style.display === 'block' ? 'none' : 'block';
 });
+
+// Add Snow Effect
+function addSnowEffect() {
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.textContent = '❄';
+    snowflake.style.left = `${Math.random() * 100}vw`;
+    snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    snowflake.style.fontSize = `${Math.random() * 1.5 + 0.5}rem`;
+    document.body.appendChild(snowflake);
+    setTimeout(() => snowflake.remove(), 5000);
+}
+setInterval(addSnowEffect, 300);
+
+// Add Rain Effect
+function addRainEffect() {
+    const raindrop = document.createElement('div');
+    raindrop.className = 'raindrop';
+    raindrop.style.left = `${Math.random() * 100}vw`;
+    raindrop.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
+    document.body.appendChild(raindrop);
+    setTimeout(() => raindrop.remove(), 2000);
+}
+setInterval(addRainEffect, 100);
