@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="timer">25:00</div>
+        <div id="progress">
+            <div id="progress-bar"></div>
+        </div>
+        <div>
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        <div style="margin-top: 20px;">
+            <label for="workTime">Work Time:</label>
+            <input type="number" id="workTime" value="25" min="1" max="60">
+            <label for="breakTime">Break Time:</label>
+            <input type="number" id="breakTime" value="5" min="1" max="30">
+        </div>
+        <button id="open-settings">⚙ Customize</button>
+        <div id="animated-character">
+            <img src="working.gif" alt="Animated Character">
+        </div>
+    </div>
+    <div id="settings-panel">
+        <h2>Customize Timer</h2>
+        <div class="settings-group">
+            <label for="background-type">Background:</label>
+            <select id="background-type">
+                <option value="gradient">Gradient</option>
+                <option value="solid">Solid</option>
+                <option value="image">Image</option>
+                <option value="gif">GIF</option>
+            </select>
+            <input type="color" id="solid-color" value="#ff9a9e">
+            <input type="text" id="background-url" placeholder="Enter URL for image/GIF">
+            <input type="text" id="gradient-value" placeholder="CSS gradient (e.g., 'to right, #ff9a9e, #fad0c4')">
+        </div>
+        <div class="settings-group">
+            <label for="font-type">Font:</label>
+            <select id="font-type">
+                <option value="Arial">Arial</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Courier New">Courier New</option>
+            </select>
+            <label for="font-size">Size:</label>
+            <input type="number" id="font-size" value="48" min="10" max="100">
+            <label for="font-color">Color:</label>
+            <input type="color" id="font-color" value="#333">
+        </div>
+        <button id="apply-customizations">Apply</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
